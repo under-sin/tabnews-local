@@ -1,22 +1,24 @@
-import React from 'react';
- 
+import React from "react";
+
 function Home() {
-    const [showMessage, setShowMessage] = React.useState(false);
-     
-    const ShowMessageFc = () => {
-        setShowMessage(!showMessage);
-        console.log("ShowMessageFc" + showMessage);
-    }
+  const [showMessage, setShowMessage] = React.useState(false);
 
-    return (
-        <>
-            <h1>Oi Heloiza &lt;3</h1>
+  const ShowMessageFc = () => {
+    setShowMessage(!showMessage);
+    console.log("ShowMessageFc" + showMessage);
+  };
 
-            <button onClick={ShowMessageFc}>Clique aqui Heloiza, nada de mal vai acontecer com vc</button>
+  return (
+    <>
+      <h1>Oi Heloiza &lt;3</h1>
 
-            {showMessage && <p>Na moral, vai tomar no cu {":)"}</p>}
-        </>
-    )
+      <button onClick={ShowMessageFc}>
+        Clique aqui Heloiza, nada de mal vai acontecer com vc
+      </button>
+
+      {showMessage && <p>Na moral, vai tomar no cu {":)"}</p>}
+    </>
+  );
 }
 
 export default Home;
